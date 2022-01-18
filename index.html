@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Web developer">
+    <meta name="keywords" content="andriuss, front-end, full-stack, web developer, javascript, php" />
+    <meta name="author" content="Andrius Sokolnikovas">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#000000">
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    
+    <title>Andriuss | Web Developer</title>
+    <link rel="icon" href="./img/favicon.png" type="image/x-icon" />
+    
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" /> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0-beta3/css/all.css" SameSite="None"/>
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" >
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./css/custom.css" />
+
+  </head>
+  <body>
+
+    <!-- Start the project here-->
+    <nav id="main-nav" class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top shadow-sm" data-spy="affix" data-offset-top="200">
+      <!-- Container wrapper -->
+      <div class="container">
+        <!-- Navbar brand -->
+        <a class="navbar-brand d-flex" href="/">
+          <img class="white-logo" src="./img/as-logo-w.png" height="35" alt="ANDRIUSS"/>
+          <img class="black-logo" src="./img/as-logo.png" height="35" alt="ANDRIUSS" style="display: none;" />
+          <span class="my-auto">Andriuss</span>
+        </a>
+    
+        <!-- Toggle button -->
+        <button
+          class="navbar-toggler collapsed border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon-x" style="vertical-align: middle; line-height: 0; font-size: 2em;">&times;</span>
+        </button>
+    
+        <!-- Collapsible wrapper -->
+        <div class="navbar-collapse collapse" id="navbarSupportedContent">
+          <!-- Left links -->
+          <div class="collapse-fullheight d-flex w-100">
+            <ul id="navbar-main" class="navbar-nav mx-auto mb-2 mb-lg-0 text-uppercase smooth-scroll">
+              <li class="px-2 nav-item">
+                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="px-2 nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="px-2 nav-item">
+                <a class="nav-link" href="#services">Services</a>
+              </li>
+              <li class="px-2 nav-item">
+                <a class="nav-link" href="#works">Works</a>
+              </li>
+              <li class="px-2 nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+              <div class="line-selected" style="display: block;"><!----></div>
+            </ul>
+      
+            <!-- Languages or CV -->
+            <ul class="d-flex flex-row navbar-nav w-auto small">
+              <!-- <li class="nav-item me-3 active">
+                <a href="#" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Andrius speaks English">EN</a>
+              </li>
+              <li class="nav-item me-3">
+                <a href="#" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Andrius speaks Lithuanian">LT</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Andrius speaks Russian">RU</a>
+              </li> -->
+              <a href="./db/uploads/andrius-sokolnikovas-cv.pdf" target="_blank" class="btn btn-outline-primary cv-btn px-4 d-inline-block">Save CV</a>
+            </ul>
+          </div>
+        </div>
+        <!-- Collapsible wrapper -->
+
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+
+    <!-- sidenote -->
+    <div orientation="right" class="side-styled-element wrapper d-none d-md-block">
+      <div class="email fade-enter-done">
+        <a class="" href="mailto:andriussok@gmail.com">andriussok@gmail.com</a>
+      </div>
+    </div>
+
+    <!-- #Hero-->
+    <div id="home" class="hero container-fluid p-0" style="overflow: hidden; position: relative;">
+      <div class="hero-overlay"></div>
+      <img class="hero-bg" style="position: absolute; min-height: 100%; object-fit: cover" src="./img/hero-bg.jpg" alt="Hero Background">
+      <div class="d-flex flex-column justify-content-center align-items-center text-white" style="min-height: 100vh; z-index: 3; position: relative;">
+        
+        <div class="text-center mt-auto">
+          <!-- <div class="blobas"></div> -->
+          <h1 class="pt-3 display-5 fw-bold">Andriuss.lt</h1>
+          <h5 class="mx-auto px-3" style="max-width:100%; width: min(80vw, 480px);">Creative web development<!-- with JavaScript and PHP.--></h5>
+
+        </div>
+        <div class="mt-auto mb-5 smooth-scroll">
+          <a href="#about" class="text-light">MEET <strong>ME</strong></a>
+        </div>
+        
+        <!-- Waves -->
+        <svg class="editorial"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28"
+            preserveAspectRatio="none">
+          <defs>
+          <path id="gentle-wave"
+          d="M-160 44c30 0 
+            58-18 88-18s
+            58 18 88 18 
+            58-18 88-18 
+            58 18 88 18
+            v44h-352z" />
+          </defs>
+          <g class="parallax">
+            <use xlink:href="#gentle-wave" x="50" y="0" fill="#4579e2"/>
+            <use xlink:href="#gentle-wave" x="50" y="3" fill="#3461c1"/>
+            <use xlink:href="#gentle-wave" x="50" y="6" fill="#ffffff"/>  
+          </g>
+        </svg>
+
+      </div>
+    </div>
+
+    <!-- #About-->
+    <div id="about" class="container">
+      <div class="d-md-flex justify-content-center align-items-center pt-5" style="min-height: min(500px, 50vh)">
+        <div class="col-12 col-md-5 text-center my-5">
+            <img
+              class="rounded shadow"
+              src="./img/as-profile.png"
+              style="
+                max-width: 100%;
+                width: 300px;
+                -webkit-transform: scaleX(-1);
+                transform: scaleX(-1);
+                "
+              alt="Andrius Sokolnikovas"
+            />
+        </div>
+
+        <div class="col-12 col-md-7 ps-md-5 ps-lg-0">
+          <h1 class="pb-3 fw-bold">Hi, I am Andrius</h1>
+          <p style="max-width:100%; width:610px;">Bachelor of management and engineering, freelancer, self taught full-stack web developer located in the UK. Since 2018 working with projects based on JS and PHP. Previously I worked as a construction manager, now I help brands to build their space online, while at the same time working on my personal <a href="#skills">skills</a> and knowledge to deliver better solutions.</p>
+          <p style="max-width:100%; width:610px;">
+              <strong>Some facts about me:</strong> Values meaningful motivation; Intuitive knowledge of technology; Places importance on relationships with superiors; Open and adaptive to change; Places importance on value rather than time; Challenges the hierarchy status-quo; Passion for learning; Free-thinking and creative; Values positive people.
+          </p>
+          
+          <a href="#contact" class="btn btn-outline-primary mt-2">Contact me</a>
+          <a href="./db/uploads/andrius-sokolnikovas-cv.pdf" target="_blank" class="btn btn-outline-primary ms-2 mt-2 px-4 d-inline-block">Save CV</a>
+        </div>
+      </div>
+
+      <!-- Skills-->
+      <div id="skills" class="d-md-flex justify-content-center align-items-center pt-5" style="min-height: min(500px, 50vh)">
+        <div class="col-12 col-md-8 ">
+          <h2 class="py-3 fw-bold d-inline-block">Skills</h2>
+          <div class="skills-swiper d-inline-flex justify-content-center align-items-center text-center" style="width: 50px">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper text-primary">
+              <!-- Slides -->
+              <div class="swiper-slide"><i class="fab fa-js-square"></i></div>
+              <div class="swiper-slide"><i class="fab fa-php"></i></div>
+              <div class="swiper-slide"><i class="fab fa-html5"></i></div>
+              <div class="swiper-slide"><i class="fab fa-css3-alt"></i></div>
+              <div class="swiper-slide"><i class="fab fa-sass"></i></div>
+              <div class="swiper-slide"><i class="fab fa-bootstrap"></i></div>
+              <div class="swiper-slide"><i class="fa-brands fa-git-alt"></i></div>
+              <div class="swiper-slide"><i class="fa-brands fa-github-square"></i></div>
+              <div class="swiper-slide"><i class="fab fa-react"></i></div>
+              <div class="swiper-slide"><i class="fab fa-node-js"></i></div>
+              <div class="swiper-slide"><i class="fab fa-wordpress-simple"></i></div>
+              <div class="swiper-slide"><i class="fab fa-shopify"></i></div>
+              <div class="swiper-slide"><i class="fa-brands fa-chrome"></i></div>
+              <div class="swiper-slide"><i class="fas fa-terminal"></i></div>
+            </div>
+          </div>
+
+
+
+          <div class="col-12 d-lg-flex justify-content-between">
+            <!-- Professional skills -->
+            <ul class="list-group list-group-flush me-3 flex-grow-1">
+              <li class="list-group-item"><strong>HTML5</strong>, <strong>CSS3</strong> [ Sass, Bootstrap, Bundlers ]</li>
+              <li class="list-group-item"><strong>JavaScript</strong> [ ES6+, React, Node.js, HTTP, JSON ]</li>
+              <li class="list-group-item"><strong>PHP</strong> [ Wordpress, Shopify, MVC, MAMPpro ]</li>
+              <li class="list-group-item">MacOS CLI, Git, SSH, API, sFTP, VSCode, Python</li>
+              <li class="list-group-item"><strong>Adobe</strong> [ Ps, Ai, Pr, Ae, Xd ]</li>
+            </ul>
+            <!-- Personal skills -->
+            <ul class="list-group list-group-flush text-end">
+              <li class="list-group-item">Communication</li>
+              <li class="list-group-item">Planning & Management</li>
+              <li class="list-group-item">Lead & Mentorship</li>
+              <li class="list-group-item">Bold thinking</li>
+              <li class="list-group-item">Googling & Learning</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- #Services-->
+    <div id="services" class="container-flex text-dark py-5 ">
+      <div class="container d-flex flex-column justify-content-center align-items-center mt-5">
+        <div class="text-center">
+            <p class="display-5" style="max-width: 700px;">I build custom websites, web apps and customized features. </p>
+        </div>
+
+        <!-- The switch -->
+        <div class="form-check form-switch my-5">
+          <input class="form-check-input" type="checkbox" id="expandMinify" />
+          <label class="form-check-label" for="techResult">Plain-English / Technical</label>
+        </div>
+        
+
+        <div class="d-flex flex-wrap justify-content-center mb-auto">
+          <!-- Services Tech list -->
+          <div class="row expand-minify d-none">
+
+            <div class="col-12 col-sm-6 col-md-4 py-3 px-xl-5 text-center">
+              <i class="fab fa-html5 fa-2x text-primary"></i>
+              <i class="fab fa-css3-alt fa-2x text-primary"></i>
+              <h3 class="">HTML / CSS</h3>
+              <p class="small">Prepare responsive crossbrowser layout for a web/app project. Use CSS libraries and preprocessors. </p>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 py-3 px-xl-5 text-center">
+              <i class="fab fa-js-square fa-2x text-primary"></i>
+              <h3 class="">JavaScript</h3>
+              <p class="small">manipulate DOM, eventListeners, fetch, JSON, local/session Storage, Tokens, OOP, FP, Class and more.</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 py-3 px-xl-5 text-center">
+              <i class="fab fa-react fa-2x text-primary"></i>
+              <i class="fab fa-node-js fa-2x text-primary"></i>
+              <h3 class="">React / NodeJS</h3>
+              <p class="small">npm manager, create and import componens, useReactHooks, create routes with expressjs.</p>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 py-3 px-xl-5 text-center">
+              <i class="fab fa-php fa-2x text-primary"></i>
+              <h3 class="">PHP</h3>
+              <p class="small">Create and maintain Wordpress, Shopify or MVC project, extend with plugins and widgets, modify templates.</p>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 py-3 px-xl-5 text-center">
+              <i class="fas fa-terminal fa-2x text-primary"></i>
+              <h3 class="">Environment</h3>
+              <p class="small">Terminal, SSH, VSCode, SublimeText, ChromeDevTools, Google, MAMPpro, Python, Reverse Engineering.</p>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 py-3 px-xl-5 text-center">
+              <i class="fab fa-adobe fa-2x text-primary"><small style="font-size: 10px; vertical-align: middle;">Adobe</small></i>
+              <h3 class="">Ps, Ai, Pr, Ae, Xd</h3>
+              <p class="small">Create, modify, export graphic for the web. From simple PSD mockups to custom fonts and Prototype projects.</p>
+            </div>
+            
+          </div>
+          <!-- Services commercial list -->
+          <div class="row expand-minify">
+            <div class="col-12 col-sm-6 col-md-4 py-3 px-xl-5 text-center">
+              <i class="fas fa-2x fa-layer-group text-primary"></i>
+              <h3 class="">Development</h3>
+              <p class="small">Turn idea in to working code.</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 py-3 px-xl-5 text-center">
+              <i class="fas fa-2x fa-barcode text-primary"></i>
+              <h3 class="">Integration</h3>
+              <p class="small">Ecommerce, widgets, plugins, APIs.</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 py-3 px-xl-5 text-center">
+              <i class="fas fa-2x fa-chart-pie text-primary"></i>
+              <h3 class="">Analytics</h3>
+              <p class="small">Insights into who is browsing the website.</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 py-3 px-xl-5 text-center">
+              <i class="fas fa-2x fa-mobile-button text-primary"></i>
+              <h3 class="">Mobile-friendly</h3>
+              <p class="small">A responsive crossbrowser design.</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 py-3 px-xl-5 text-center">
+              <i class="fas fa-2x fa-tasks text-primary"></i>
+              <h3 class="">Website Audits</h3>
+              <p class="small">Page performance and user experience.</p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 py-3 px-xl-5 text-center">
+              <i class="fas fa-2x fa-pen-square text-primary"></i>
+              <h3 class="">Content Management</h3>
+              <p class="small">Features to update content easy.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- #Works-->
+    <div id="works" class="container-flex text-dark p-5">
+      <div class="container d-flex flex-column justify-content-center align-items-center mt-5" style="min-height: min(500px, 50vh)">
+        <div class="text-center mb-auto">
+          <h1 class="fw-bold">Works</h1>
+          <p>Beside my time I spend on learning to write a better code, <br>these are just a few commercial examples of what I do at work.</p>
+        </div>
+        <div id="projects-component" class="my-5 row d-flex flex-wrap justify-content-center"></div>
+        
+        <div class="d-flex flex-wrap justify-content-center mb-auto">
+          <h3 class="p-2 fw-bold"></h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modalWrap">
+      <div id="projectModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="projectModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen modal-dialog-centered pt-5" role="document">
+         
+          <div id="modal-contentas" class="modal-content">
+            <div class="modal-header align-items-center shadow-sm">
+              <h5 class="modal-title" id="modalLongTitle">Project</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"></span>
+              </button>
+            </div>
+
+            <!-- call modalBody() -->
+            <div id="modalBodyHolder" class="modal-body d-flex"></div>
+
+            <div class="modal-footer">
+              <i class="fa-solid fa-2x fa-keyboard text-primary d-none d-sm-block" data-bs-toggle="tooltip" data-bs-placement="top" title="To navigate use left/right keyboard keys"></i>
+              <div class="m-auto">
+                <button type="button" class="btn btn-secondary px-5 mx-3" data-slider="prev">Prev</button>
+                <button type="button" class="btn btn-secondary px-5 mx-3" data-slider="next">Next</button>
+              </div>
+              <button type="button" class="btn btn-primary px-5 d-none d-sm-block" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+    <!-- #Contact-->
+    <div id="contact" class="container-fluid bg-gradientas p-0">
+      <div class="container d-flex flex-column justify-content-center align-items-center pt-5" style="min-height: 90vh;">
+        
+        <div class="text-center mt-5">
+          <h1 class="fw-bold">Get in Touch</h1>
+          <!-- <p class="display-5 fw-bold">Get in Touch</p> -->
+          <p style="width: 350px; max-width: 100%;">Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>
+        </div>
+
+        <div class="d-flex">
+          <a href="mailto:andriussok@gmail.com" class="btn btn-primary m-2 px-5 d-inline-block">Say Hello</a>
+        </div>
+        <!-- <h3 class="p-2 fw-bold">andriussok@gmail.com</h3> -->
+        
+        <a href="./db/uploads/andrius-sokolnikovas-cv.pdf" target="_blank" class="btn btn-outline-primary m-2 px-5 d-inline-block">Save CV</a>
+
+        <div class="d-flex justify-content-center mt-3">
+          <a class="text-dark" href="https://github.com/andriussok" target="_blank" rel="noreferrer" aria-label="Github"><i class="p-2 fab fa-2x fa-github-square"></i></a>
+          <a class="text-dark" href="https://linkedin.com/in/andriussok" target="_blank" rel="noreferrer" aria-label="Linkedin"><i class="p-2 fab fa-2x fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer py-3">
+      <div class="container text-center text-lg-left">
+        <span class="x-small">© <span id="cYear">Since 2018</span> andriuss.lt</span>
+      </div>
+    </footer>
+    <!-- End project here-->
+  
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!-- Tag Cloud -->
+    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
+
+    <!-- Projects Data -->
+    <script type="text/javascript" src="./db/projects-data.js"></script>
+    <!-- Smoothscroll polyfill -->
+    <script type="text/javascript" src="./js/smoothscroll.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript" src="./js/custom.js"></script>
+
+  </body>
+</html>
