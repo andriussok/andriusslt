@@ -1,5 +1,4 @@
-// --- Decrease scroll event calls;
-
+// Vanilla JS
 
 // --- Navigation styling variables
 const mainNav = document.querySelector('#main-nav');
@@ -128,11 +127,15 @@ document.getElementById("cYear").innerHTML = new Date().getFullYear();
 
 // --- Console msg
 (function () {
-  var t = navigator.userAgent.toLowerCase();
+  const t = navigator.userAgent.toLowerCase();
+
   if (/(chrome|firefox|safari)/.test(t.toLowerCase())) {
-      var e = ["padding: 20px 5px 16px", "background-color: #171718", "color: #bc994e"].join(";");
-      t.indexOf("chrome") > -1 && ((e += ";"), (e += ["padding: 20px 5px 16px 60px", "background-image: url(http://127.0.0.1:5500/img/as-logo-w.png)", "background-position: 10px 9px", "background-repeat: no-repeat", "background-size: auto 30px"].join(";")));
-      var i = ["padding: 20px 5px 16px", "background-color: #bc994e", "color: #ffffff"].join(";"),
+      let e = ["padding: 20px 5px 16px", "background-color: #171718", "color: #bc994e"].join(";");
+      t.indexOf("chrome") > -1 && ((e += ";"), (e += [
+        "padding: 20px 5px 16px 60px","background-image: url("+location.origin+"/img/as-logo-w.png)",
+        "background-position: 10px 9px", "background-repeat: no-repeat", "background-size: auto 30px"
+      ].join(";")));
+      let i = ["padding: 20px 5px 16px", "background-color: #bc994e", "color: #ffffff"].join(";"),
           n = ["background-color: transparent"].join(";");
       console.log("\n\n %c Crafted by ANDRIUSS %c andriuss.lt %c \n\n\n", e, i, n);
   } else window.console && console.log("Crafted by ANDRIUSS - andriuss.lt");
