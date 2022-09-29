@@ -127,18 +127,20 @@ document.getElementById("cYear").innerHTML = new Date().getFullYear();
 
 // --- Console msg
 (function () {
-  const t = navigator.userAgent.toLowerCase();
+  const browser = navigator.userAgent.toLowerCase();
 
-  if (/(chrome|firefox|safari)/.test(t.toLowerCase())) {
-      let e = ["padding: 20px 5px 16px", "background-color: #171718", "color: #bc994e"].join(";");
-      t.indexOf("chrome") > -1 && ((e += ";"), (e += [
-        "padding: 20px 5px 16px 60px","background-image: url("+location.origin+"/img/as-logo-w.png)",
-        "background-position: 10px 9px", "background-repeat: no-repeat", "background-size: auto 30px"
+  if (/(chrome|firefox|safari)/.test(browser.toLowerCase())) {
+      let c1 = ["padding: 20px 5px 16px", "background-color: #171718", "color: #bc994e"].join(";");
+      browser.indexOf("chrome") > -1 && ((c1 += ";"), (c1 += [
+        "padding: 20px 5px 16px 60px", "background-position: 10px 9px",
+        "background-repeat: no-repeat", "background-size: auto 30px",
+        "background-image: url(" + location.origin + "/img/as-logo-w.png);"
       ].join(";")));
-      let i = ["padding: 20px 5px 16px", "background-color: #bc994e", "color: #ffffff"].join(";"),
-          n = ["background-color: transparent"].join(";");
-      console.log("\n\n %c Crafted by ANDRIUSS %c andriuss.lt %c \n\n\n", e, i, n);
-  } else window.console && console.log("Crafted by ANDRIUSS - andriuss.lt");
+      let c2 = ["padding: 20px 5px 16px", "background-color: #bc994e", "color: #ffffff"].join(";"),
+          c3 = ["background-color: transparent"].join(";");
+      
+      console.info("\n %c Crafted by ANDRIUSS %c andriuss.lt %c \n", c1, c2, c3);
+  } else window.console && console.info("Crafted by ANDRIUSS - andriuss.lt");
 })();
 
 
