@@ -83,7 +83,7 @@ const PROJEKTAI = {
       "hashtags": ["Ae", "Wordpress", "WHM", "cPanel"]
     }
   ],
-  "sides": [
+  "otherProjects": [
     {
       "id": 0,
       "name": "Cleanup Scaled Images",

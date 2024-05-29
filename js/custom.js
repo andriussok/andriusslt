@@ -161,27 +161,27 @@ const swiper = new Swiper('.skills-swiper', {
 // Data from db
 const localData = PROJEKTAI;
 const projectsContainer = document.getElementById("projects-component");
-const sidesContainer = document.getElementById("sides-component");
+const otherProjectsContainer = document.getElementById("other-projects-component");
 
 // add projects
 const work = localData.projects.map(el => workComponent(el)).join("");
 projectsContainer.insertAdjacentHTML('afterbegin', work);
 
-// add sides
-const sides = localData.sides.reverse().map(el => sidesComponent(el)).join("");
-sidesContainer.insertAdjacentHTML('afterbegin', sides);
+// add otherProjects
+const otherProjects = localData.otherProjects.reverse().map(el => otherProjectsComponent(el)).join("");
+otherProjectsContainer.insertAdjacentHTML('afterbegin', otherProjects);
 
-function sidesComponent(side) { return `
+function otherProjectsComponent(oProject) { return `
   <div class="accordion-item">
     <h2 class="accordion-header">
-      <button class="accordion-button collapsed px-1 px-md-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSide${side.id}" aria-expanded="false" aria-controls="collapseSide${side.id}">
-        ${side.url ? `<a class="ms-2 me-3" href="${side.url}" target="_blank" data-bs-toggle="tooltip" title="Open project source"><i class="fas fa-external-link-alt"></i></a>` : ''}
-        ${side.name}
+      <button class="accordion-button collapsed px-1 px-md-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOtherProject${oProject.id}" aria-expanded="false" aria-controls="collapseOtherProject${oProject.id}">
+        ${oProject.url ? `<a class="ms-2 me-3" href="${oProject.url}" target="_blank" data-bs-toggle="tooltip" title="Open project source"><i class="fas fa-external-link-alt"></i></a>` : ''}
+        ${oProject.name}
       </button>
     </h2>
-    <div id="collapseSide${side.id}" class="accordion-collapse collapse" data-bs-parent="#sides-component">
+    <div id="collapseOtherProject${oProject.id}" class="accordion-collapse collapse" data-bs-parent="#other-projects-component">
       <div class="accordion-body small">
-        ${side.description}
+        ${oProject.description}
       </div>
     </div>
   </div>
