@@ -9,7 +9,6 @@ const line = document.querySelector(".line-selected");
 const sidenote = document.querySelector(".side-styled-element");
 let lastScrollTop = 0;
 
-
 // --- Toggle Mobile Menu on item click;
 [...mainNavLinks].map(link => { 
   link.addEventListener('click', function(){
@@ -128,15 +127,10 @@ document.getElementById("cYear").innerHTML = new Date().getFullYear();
 // --- Console msg
 (function () {
   const browser = navigator.userAgent.toLowerCase();
-
-  if (/(chrome|firefox|safari)/.test(browser.toLowerCase())) {
-      let c1 = ["padding: 20px 5px 16px", "background-color: #171718", "color: #bc994e"].join(";");
-      browser.indexOf("chrome") > -1 && ((c1 += ";"), (c1 += [
-        "padding: 20px 5px 16px 60px", "background-position: 10px 9px",
-        "background-repeat: no-repeat", "background-size: auto 30px",
-        "background-image: url(" + location.origin + "/img/as-logo-w.png);"
-      ].join(";")));
-      let c2 = ["padding: 20px 5px 16px", "background-color: #bc994e", "color: #ffffff"].join(";"),
+  if (/(mozilla|chrome|firefox|safari)/.test(browser.toLowerCase())) {
+      let c1 = ["padding: 10px 5px", "background-color: #171718", "color: #ffffff"].join(";");
+      browser.indexOf("mozilla") > -1 && ((c1 += ";"));
+      let c2 = ["padding: 10px 5px", "background-color: #0d6efd", "color: #ffffff"].join(";"),
           c3 = ["background-color: transparent"].join(";");
       
       console.info("\n %c Crafted by ANDRIUSS %c andriuss.lt %c \n", c1, c2, c3);
@@ -155,7 +149,7 @@ const swiper = new Swiper('.skills-swiper', {
   effect: "cube",
     grabCursor: true,
     cubeEffect: {
-      shadow: true,
+      shadow: false,
       slideShadows: false,
     },
 });
@@ -167,9 +161,32 @@ const swiper = new Swiper('.skills-swiper', {
 // Data from db
 const localData = PROJEKTAI;
 const projectsContainer = document.getElementById("projects-component");
+const sidesContainer = document.getElementById("sides-component");
 
+// add projects
 const work = localData.projects.map(el => workComponent(el)).join("");
 projectsContainer.insertAdjacentHTML('afterbegin', work);
+
+// add sides
+const sides = localData.sides.reverse().map(el => sidesComponent(el)).join("");
+sidesContainer.insertAdjacentHTML('afterbegin', sides);
+
+function sidesComponent(side) { return `
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed px-1 px-md-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSide${side.id}" aria-expanded="false" aria-controls="collapseSide${side.id}">
+        ${side.url ? `<a class="ms-2 me-3" href="${side.url}" target="_blank" data-bs-toggle="tooltip" title="Open project source"><i class="fas fa-external-link-alt"></i></a>` : ''}
+        ${side.name}
+      </button>
+    </h2>
+    <div id="collapseSide${side.id}" class="accordion-collapse collapse" data-bs-parent="#sides-component">
+      <div class="accordion-body small">
+        ${side.description}
+      </div>
+    </div>
+  </div>
+  `;
+};
 
 function workComponent(project) { return `
   <div
@@ -327,3 +344,7 @@ function keyPress() {
         
   })
 }keyPress();
+
+// --- init tooltips
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));

@@ -156,9 +156,8 @@ button:focus {
     height: 7vw;
   }
 }
-.skills-icons {cursor: default;}
-.skills-icons i:not(:last-child) {margin-right: 8px}
-.skills-swiper i {font-size: 2rem}
+.skills-swiper i {font-size: 2rem;}
+.skills-swiper i {background-color: #fff;}
 
 .side-styled-element.wrapper {
   width: 40px;
@@ -168,12 +167,6 @@ button:focus {
   right: 40px;
   z-index: 10;
 }
- /* @supports (mix-blend-mode: difference) {
-  .side-styled-element.wrapper {
-    filter: invert();
-    mix-blend-mode: difference;
-  }
-} */
 
 .side-styled-element.email {
   display: flex;
@@ -197,4 +190,32 @@ button:focus {
   height: 90px;
   margin: 0px auto;
   background-color: var(--bs-primary);
+}
+
+#contact {
+  position: relative;
+  overflow: hidden;
+}
+#contact::before,
+#contact::after {
+  content: '';
+  background: #efefef;
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  left: 50%;
+  z-index: -1;
+}
+
+.toolkitlist span {
+  font-size: 14px;
+  color: #262626;
+}
+.toolkitlist > div { 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 150px;
+  padding: 15px;
+  flex-grow: 1;
 }
