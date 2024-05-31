@@ -208,11 +208,11 @@ button:focus {
   z-index: -1;
 }
 
-.toolkitlist span {
+.techstacklist span {
   font-size: 14px;
   color: #262626;
 }
-.toolkitlist > div { 
+.techstacklist > div { 
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 150px;
