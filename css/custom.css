@@ -18,6 +18,10 @@ a, a:focus, a:active, :focus { outline: none !important; text-decoration: none; 
   width: auto;
   transform: translateX(-50%);
 }
+.hero-bg-mob {
+  top: unset;
+  bottom: 0;
+}
 
 /* Change color on scroll */
 #main-nav {
