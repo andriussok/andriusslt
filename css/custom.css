@@ -9,7 +9,8 @@ a, a:focus, a:active, :focus { outline: none !important; text-decoration: none; 
 .h-max-content { height: max-content; }
 .opacity-30 {opacity: 0.3;}
 
-.hero-bg{
+.hero-bg,
+.hero-bg-mob {
   position: fixed;
   top: 0%;
   left: 50%;

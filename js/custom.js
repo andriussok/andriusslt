@@ -44,7 +44,7 @@ function animateOnScroll() {
 
 
   // --- Hero Paralax fx
-  let image = document.querySelector("#home img");
+  let image = document.querySelector("#home .hero-bg");
   if(fromTop < image.offsetHeight) {
     image.style.transform = `translate3d(-50%, -${(fromTop/100)}%, 0) scale(${(100 + fromTop/5)/100})`;
   };
