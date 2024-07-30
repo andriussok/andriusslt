@@ -75,7 +75,7 @@ a, a:focus, a:active, :focus { outline: none !important; text-decoration: none; 
     align-items: center;
   }
 
-  #main-nav.bg-transparent{
+  #main-nav.bg-transparent.menu-expanded {
     background-color: #000 !important;
   }
 
@@ -229,4 +229,9 @@ button:focus {
 }
 .techstacklist > div:hover {
   background-color: rgba(var(--bs-primary-rgb), 0.20);
+}
+
+.dvh-100 {
+  height: 100vh; /* fallback */
+  height: 100dvh;
 }

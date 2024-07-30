@@ -19,6 +19,14 @@ let lastScrollTop = 0;
 });
 
 
+// --- Toggle mainNav background on collapseContent;
+const collapseContent = document.querySelector('#navbarSupportedContent');
+if (mainNav && collapseContent) {
+  collapseContent.addEventListener('show.bs.collapse', () => mainNav.classList.add('menu-expanded'));
+  collapseContent.addEventListener('hide.bs.collapse', () => mainNav.classList.remove('menu-expanded'));
+}
+
+
 // --- Animate elastic line
 const animateLineSelected = (link) => {
   let offsetleft = link.parentElement.offsetLeft;
