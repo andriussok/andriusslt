@@ -93,17 +93,24 @@ const PROJEKTAI = {
     },
     {
       "id": 1,
-      "name": "Event Tickets Manager For Woocommerce PRO Addon",
-      "url": "https://github.com/andriussok/event-tickets-manager-for-woocommerce-pro-addon",
-      "description": "Enables you to exclude specific days from daily event recurrence schedules in Event Tickets Manager for WooCommerce Pro. Exclude any days of the week according to your event needs.",
-      "type": ["wp"],
-    },
-    {
-      "id": 2,
       "name": "Form Fields Enhancer for Elementor",
       "url": "https://github.com/andriussok/form-field-enhancer-for-elementor",
       "description": "Form Field Enhancer for Elementor (FFEE) adds functionality to Elementor forms by offering features like length validation with a character counter, pattern validation, readonly field switcher, and sub-labels.",
       "type": ["wp"],
+    },
+    {
+      "id": 2,
+      "name": "Experience Days Gateway",
+      "url": "https://github.com/andriussok/event-tickets-manager-for-woocommerce-pro-addon",
+      "description": "A WooCommerce payment gateway that allows customers to checkout using Experience Days Vouchers.",
+      "type": ["wp"],
+    },
+    {
+      "id": 3,
+      "name": "Coffeeshop project",
+      "url": "https://github.com/andriussok/coffeeshop",
+      "description": "Demo e-commerce frontend built with Vue and Vite, featuring product browsing and user interaction.",
+      "type": ["vue"],
     },
   ]
 }

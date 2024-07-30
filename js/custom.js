@@ -173,15 +173,16 @@ otherProjectsContainer.insertAdjacentHTML('afterbegin', otherProjects);
 
 function otherProjectsComponent(oProject) { return `
   <div class="accordion-item">
-    <h2 class="accordion-header">
+    <h3 class="accordion-header">
       <button class="accordion-button collapsed px-1 px-md-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOtherProject${oProject.id}" aria-expanded="false" aria-controls="collapseOtherProject${oProject.id}">
-        ${oProject.url ? `<a class="ms-2 me-3" href="${oProject.url}" target="_blank" data-bs-toggle="tooltip" title="Open project source"><i class="fas fa-external-link-alt"></i></a>` : ''}
+        <span class="me-2 badge text-bg-secondary shadow-sm fw-semibold">${oProject.type}</span>
         ${oProject.name}
+        ${oProject.url ? `<a class="ms-2 me-3" href="${oProject.url}" target="_blank" data-bs-toggle="tooltip" title="Open project source"><i class="fas fa-external-link-alt"></i></a>` : ''}
       </button>
-    </h2>
+      </h3>
     <div id="collapseOtherProject${oProject.id}" class="accordion-collapse collapse" data-bs-parent="#other-projects-component">
       <div class="accordion-body small">
-        ${oProject.description}
+        ${oProject.description} ${oProject.url ? `<a href="${oProject.url}" target="_blank">[Open project source]</a>` :''}
       </div>
     </div>
   </div>
