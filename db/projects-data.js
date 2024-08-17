@@ -101,7 +101,7 @@ const PROJEKTAI = {
     {
       "id": 2,
       "name": "Experience Days Gateway",
-      "url": "https://github.com/andriussok/event-tickets-manager-for-woocommerce-pro-addon",
+      "url": "https://github.com/andriussok/experience-days-gateway",
       "description": "A WooCommerce payment gateway that allows customers to checkout using Experience Days Vouchers.",
       "type": ["wp"],
     },
