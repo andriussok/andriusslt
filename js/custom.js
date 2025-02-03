@@ -250,8 +250,27 @@ function onModalCall() {
       }
 
     });
-  }))
-} onModalCall();
+
+    // Fix aria-hidden issue when modal opens
+    const projectModal = document.getElementById("projectModal");
+
+    projectModal.addEventListener("show.bs.modal", function () {
+      this.removeAttribute("aria-hidden");
+
+      setTimeout(() => {
+        const focusable = this.querySelector("button, a, input, [tabindex]:not([tabindex='-1'])");
+        if (focusable) focusable.focus();
+      }, 10);
+    });
+
+    projectModal.addEventListener("hidden.bs.modal", function () {
+      this.setAttribute("aria-hidden", "true");
+    });
+
+  }));
+}
+onModalCall();
+
 
 
 function modalBody(project) {
