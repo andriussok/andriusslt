@@ -1,7 +1,7 @@
 html {
   --scroll-behavior: smooth;
   scroll-behavior: smooth;
-  /* font-size: 15px; */
+  background-color: var(--bs-primary);
 }
 
 h1,h2,h3,h4,h5,h6, body {font-family: 'Source Sans Pro', sans-serif;}
@@ -42,7 +42,7 @@ a, a:focus, a:active, :focus { outline: none !important; text-decoration: none; 
 
 /* cards style */
 .view .mask.rgba-blue-strong { 
-  transition: opacity 0.4s, background .4s;;
+  transition: opacity 0.4s, background .4s;
   opacity: 0;
 }
 .view:hover .mask.rgba-blue-strong {
@@ -94,6 +94,16 @@ a, a:focus, a:active, :focus { outline: none !important; text-decoration: none; 
   color: #000 !important;
   border-color: #fff !important;
   background-color: #fff;
+}
+
+@supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
+  .navbar:not(.bg-transparent) { 
+    backdrop-filter: saturate(180%) blur(10px);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+  }
+  .navbar-light {
+    background: rgba(255,255,255, .8) !important
+  }
 }
 
 .navbar-dark .navbar-toggler-icon{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 0.55)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")}
@@ -204,15 +214,24 @@ button:focus {
 }
 #contact::before,
 #contact::after {
+  --lineheight: 1px;
   content: '';
-  background: #efefef;
+  background: linear-gradient(0deg, var(--bs-primary) 10%, transparent 20%, transparent 80%, var(--bs-primary) 100%);
   display: block;
   position: absolute;
   height: 100%;
-  width: 1px;
-  left: 50%;
-  z-index: -1;
+  width: var(--lineheight);
+  top: 0;
+  left: calc(50% - (var(--lineheight)/2));
+  z-index: 1;
+  opacity: 0.2;
 }
+/* #contact::before {
+  transform: rotate(-45deg);
+}
+#contact::after {
+  transform: rotate(45deg);
+} */
 
 .techstacklist span {
   font-size: 14px;
