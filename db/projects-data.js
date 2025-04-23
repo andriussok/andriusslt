@@ -3,7 +3,7 @@ const PROJEKTAI = {
     {
       "id": 0,
       "name": "Lamoda",
-      "url": "https://lamoda.co.uk",
+      "url": "https://eu.lamoda.co.uk/",
       "description": "This project involved migrating LAMODA's website from Magento to Shopify&nbsp;Plus to address SEO challenges following a major Magento update. The backend stock management system, Linnworks, was integrated with Shopify, requiring some data mapping to fit Shopify's structure. Key tasks included customising the theme with bespoke design layouts and creating product filters. The project was divided into four regional sites (US, EU, UK, AUS) to allow for localised content and pricing. The result was improved SEO performance and an easy-to-manage content for LAMODA's in-house team. Now project managed by another agency.",
       "featured": "./db/uploads/lamoda-featured.jpg",
       "type": ["web"],
@@ -11,12 +11,12 @@ const PROJEKTAI = {
     },
     {
       "id": 1,
-      "name": "DesiCity",
-      "url": "https://desicity.com",
-      "description": "As part of a development team, I contributed to the front end by simplifying layout management with reusable components and structuring the overall layout based on provided mockups. Project updates and feature implementation were tracked using GitLab.",
-      "featured": "./db/uploads/desicity-featured.jpg",
+      "name": "Mahirs",
+      "url": "https://mahirs.com",
+      "description": "As part of a team, I worked with the designer to define the site architecture and layouts to meet the client’s requirements. Leveraging Advanced Custom Fields (ACF), I implemented dynamic venue listings complete with filtering functionality and a front-end venue-submission feature.",
+      "featured": "./db/uploads/mahirs-featured.jpg",
       "type": ["web"],
-      "hashtags": ["MVC", "OpenCart", "PHP", "HTML", "CSS", "JS", "Xd"]
+      "hashtags": ["Wordpress", "HTML", "CSS", "JS", "PHP"]
     },
     {
       "id": 2,
